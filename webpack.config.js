@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const WebpackModules=require('webpack-modules');
 
 module.exports = {
   module: {
@@ -32,6 +33,7 @@ module.exports = {
   },
   devServer: { port: 789 },
   plugins: [
-    new HtmlWebPackPlugin()
+    new HtmlWebPackPlugin(),
+    new WebpackModules()
   ]
 };
