@@ -30,6 +30,8 @@
     "webpack-modules": "^1.0.0"
   },
   "dependencies": {
+    "callbag-basics": "^3.0.1",
+    "callbag-sample": "^2.0.0",
     "preact": "10.0.0-alpha.0"
   }
 }

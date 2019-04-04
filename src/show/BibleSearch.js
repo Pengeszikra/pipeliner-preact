@@ -9,8 +9,7 @@ export default function (props) {
   const [result = {}, changeResult] = useState({});  
   
   return (
-    <div className="content">
-      <div className = "logo no-select">🐠</div>
+    <div className="content">      
       <SearchInput 
         result={result} 
         changeResult = {changeResult}
@@ -21,3 +20,5 @@ export default function (props) {
     </div>
   );
 }
+
+// <div className = "logo no-select">🐠</div>
