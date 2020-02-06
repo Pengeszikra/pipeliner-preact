@@ -1,37 +1,25 @@
 {
   "name": "bible-hu-preact",
   "description": "bible app with preact/hooks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --progress --hot --inline --mode none"
+    "build": "parcel build ./src/index.html",
+    "start": "parcel ./src/index.html"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.6",
-    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.6",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/runtime": "^7.1.5",
-    "babel-eslint": "8",
-    "babel-loader": "^8.0.4",
-    "css-loader": "^1.0.1",
-    "eslint": "4.x",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "node-sass": "^4.10.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10",
-    "webpack-modules": "^1.0.0"
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-pipeline-operator": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.25.0"
   },
   "dependencies": {
-    "callbag-basics": "^3.0.1",
+    "callbag-basics": "^3.2.0",
     "callbag-sample": "^2.0.0",
-    "preact": "10.0.0-alpha.0"
+    "preact": "^10.3.1",
+    "preact-slash": "^0.8.3"
   }
 }
