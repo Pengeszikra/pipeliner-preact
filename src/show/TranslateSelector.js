@@ -7,8 +7,8 @@ export default function({translate}) {
   const [trans, changeTranslate] = useState(translate);
   
   return (
-    <select className = {"no-select inline half"} onChange = {handleInput(changeTranslate)} >
-      {Object.keys(forditasok).map((key, i) => <option value = {key} key={i}>{forditasok[key]}</option>)}
+    <select className = "no-select inline half" onChange = {handleInput(changeTranslate)} >
+      {Object.keys(forditasok).map((key, i) => <option value={key} key={i}>{forditasok[key]}</option>)}
     </select>
   );
 }
