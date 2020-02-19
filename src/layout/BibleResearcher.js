@@ -1,29 +1,17 @@
 import { h } from 'preact';
-import { useReducerActions, divFactory, factory } from 'preact-slash';
-import { actionCreator } from 'preact-slash';
+import { useEffect} from 'preact/hooks';
+import { divFactory, factory } from 'preact-slash';
+import useReducerActions from '../utils/useReducerActions';
 
-/*
-const [ASK_ABOUT, askAbout] = actionCreator('search');
-const [ANSWER_READY, answerReady] = actionCreator('search');
-
-const initialState = {
-  answer: null,
-  search: ''
-}
-
-const reducer = (state, {type, payload}) => {
-  switch (type) {
-    case ASK_ABOUT: return {...state, search: payload, answer: null};
-    case ANSWER_READY: return {...state, answer: payload};
-    default: return state;
-  }
-}
-
-const actions = { askAbout, answerReady }
-*/
+import {reducer, initialState, actions} from '../flow/bibleReducer';
 
 export default () => {
-  //const {state, askAbout, answerReady } = useReducerActions(reducer, initialState, actions);
+  const {state, askAbout, answerReady } = useReducerActions(reducer, initialState, actions);
+  const {answer, search} = state;
+
+  useEffect(() => {
+    answerReady(`  simplify still begin good question is, why don't work preact-slash/useReducerActions`);
+  }, []);
 
   return (
     <pre>{`
@@ -33,11 +21,15 @@ export default () => {
     Bible based researcher application.
 
     Focus on:
-      - usability.
+      - research in different Bible publication
+      - usability
+      - preact-slash test
+      - local database test
+      - custom input component test      
       - mobile first
-      
     `}
     <input type='text'></input>
+    <p>{answer}</p>
     </pre>
   );
 }

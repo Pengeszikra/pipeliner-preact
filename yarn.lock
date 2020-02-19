@@ -4254,14 +4254,19 @@ pre@^0.1.3:
   resolved "https://registry.yarnpkg.com/pre/-/pre-0.1.3.tgz#b956ec6f1910a73bbea8d8b90d22588c566cf8af"
   integrity sha1-uVbsbxkQpzu+qNi5DSJYjFZs+K8=
 
-preact-slash@^0.8.3:
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/preact-slash/-/preact-slash-0.8.3.tgz#9964849444cb02beaf2d15d414757bae58c81843"
-  integrity sha512-BsdLWxYyLT3eoxxwJiBNROK0hL4PXO5acidJ6aJ1ba6J/no538M+UtyPvJfvghzNec8h/e9tn95T6tYfK0myBw==
+preact-slash@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/preact-slash/-/preact-slash-0.8.4.tgz#6b92f5de434e4219121b743f59135fb6e756b43a"
+  integrity sha512-M7b/JHJP+n2ybNHdq1pi6JazDy5AbEjKZqs0PSFdvwvfIMaFY/80TqWlqirABezEtGeoOA6w+fgevCXlWTbggg==
   dependencies:
     preact "^10.3.0"
 
-preact@^10.3.0, preact@^10.3.1:
+preact@^10.3.0:
+  version "10.3.2"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.3.2.tgz#1dabd1747b54de4e6820c7d2eadbb8bc4c2e3047"
+  integrity sha512-yIx4i7gp45enhzX4SLkvvR20UZ+YOUbMdj2KEscU/dC70MHv/L6dpTcsP+4sXrU9SRbA3GjJQQCPfFa5sE17dQ==
+
+preact@^10.3.1:
   version "10.3.1"
   resolved "https://registry.yarnpkg.com/preact/-/preact-10.3.1.tgz#70a2cc5484ca727c992216dfc528907d240e0a05"
   integrity sha512-CaKtEY235GtuypRRvaMxM3PNy44OzQj8BO7plXbPwF+iJzNnUufgHtqRA6NbjeWnfy+cN1dP1MFTAGxJmCiPqQ==
