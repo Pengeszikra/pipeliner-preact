@@ -9,6 +9,8 @@ export default () => {
   const {state, askAbout, answerReady } = useReducerActions(reducer, initialState, actions);
   const {answer, search} = state;
 
+  const changeSearchInput = event => askAbout(event.target.value);
+
   useEffect(() => {
     answerReady(`  simplify still begin good question is, why don't work preact-slash/useReducerActions`);
   }, []);
@@ -28,8 +30,9 @@ export default () => {
       - custom input component test      
       - mobile first
     `}
-    <input type='text'></input>
+    <input type='text' value={search} onInput={changeSearchInput}/><span>{search}</span>
     <p>{answer}</p>
+    
     </pre>
   );
 }
