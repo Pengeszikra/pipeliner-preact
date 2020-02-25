@@ -7,7 +7,7 @@
   "scripts": {
     "build": "parcel build ./src/index.html",
     "start": "parcel ./src/index.html",
-    "eslint": "eslint -f json ./src/layout/CallbagResearch.js"
+    "lint": "eslint ./src"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
