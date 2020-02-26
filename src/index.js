@@ -4,4 +4,4 @@ import './style/style.scss';
 import BibleResearcher from './layout/BibleResearcher';
 import CallbagResearch from './layout/CallbagResearch';
 
-render( <CallbagResearch />, document.body );
+render( <BibleResearcher />, document.body );

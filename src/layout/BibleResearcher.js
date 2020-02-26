@@ -1,29 +1,37 @@
 import { h } from 'preact';
-import { useEffect} from 'preact/hooks';
+import { useEffect, useLayoutEffect } from 'preact/hooks';
 import { divFactory, factory } from 'preact-slash';
 import useReducerActions from '../utils/useReducerActions';
 
 import {reducer, initialState, actions} from '../flow/bibleReducer';
+import { fromIter, forEach, pipe } from 'callbag-basics';
+import { debounce } from 'callbag-debounce';
+import { kereses } from '../flow/szentirasApi';
 
 export default () => {
   const {state, askAbout, answerReady } = useReducerActions(reducer, initialState, actions);
   const {answer, search} = state;
 
-  const changeSearchInput = event => askAbout(event.target.value);
+  const changeSearchInput = ({target:{value}}) => value |> askAbout;
 
-  useEffect(() => {
-    answerReady(`  simplify still begin good question is, why don't work preact-slash/useReducerActions`);
-  }, []);
-
+  useLayoutEffect(() => {
+    if (search.length > 3) {
+      search |> kereses(p => JSON.stringify(p, null, 2) |> answerReady );
+    }    
+  }, [search]);
+  
   return (
     <pre>{`
     -- Bible Researcher --
 
-    This is the second rounds of develeopment 
-    Bible based researcher application.
+    Bible studie application based on `} 
+
+    <a href="https://szentiras.hu/api" target="_base">szentiras.hu/api</a>
+
+    {`
 
     Focus on:
-      - research in different Bible publication
+      - Studie in different Bible publication
       - usability
       - preact-slash test
       - local database test
