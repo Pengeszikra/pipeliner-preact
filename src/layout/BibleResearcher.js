@@ -16,7 +16,7 @@ export default () => {
 
   useLayoutEffect(() => {
     if (search.length > 3) {
-      search |> kereses(p => JSON.stringify(p, null, 2) |> answerReady );
+      search |> kereses(json => JSON.stringify(json, null, 2) |> answerReady );
     }    
   }, [search]);
   
@@ -30,13 +30,14 @@ export default () => {
 
     {`
 
-    Focus on:
+    Focus on:      
       - Studie in different Bible publication
       - usability
       - preact-slash test
       - local database test
       - custom input component test      
       - mobile first
+      + pipeline operator using 
     `}
     <input type='text' value={search} onInput={changeSearchInput}/><span>{search}</span>
     <p>{answer}</p>

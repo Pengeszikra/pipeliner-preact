@@ -13,13 +13,12 @@ export default () => {
       }
     }
 
-    
-  foo() 
+  
+  foo()
     |> fromIter
     |> debounce(150) 
     |> takeWhile(n => n <= 9) 
-    |> forEach(p => setData(d => d ? [d,p].join('\n') :  p ))
-    
+    |> forEach(p => setData(d => d ? [d,p].join('\n') :  p ))    
   }, []);
 
   return <pre style={{margin:'2em'}}>{data}</pre>;
