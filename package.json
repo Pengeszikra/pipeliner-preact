@@ -20,7 +20,6 @@
     "sass": "^1.25.0"
   },
   "dependencies": {
-    "call": "^5.0.3",
     "callbag-basics": "^3.2.0",
     "callbag-debounce": "^2.1.2",
     "callbag-from-event": "^1.2.1",
@@ -31,7 +30,6 @@
     "callbag-sample": "^2.0.0",
     "callbag-take-while": "^2.0.0",
     "callbag-timer": "^1.0.0",
-    "pre": "^0.1.3",
     "preact": "^10.3.1",
     "preact-slash": "^0.8.4"
   }
