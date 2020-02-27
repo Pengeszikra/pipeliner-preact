@@ -1460,6 +1460,13 @@ callbag-from-event@1, callbag-from-event@^1.2.1:
   dependencies:
     callbag "^1.1.0"
 
+callbag-from-function@^2.1.0:
+  version "2.1.0"
+  resolved "https://ip-109-71-162-126.dditscdn.com/nexus/repository/npm-all/callbag-from-function/-/callbag-from-function-2.1.0.tgz#36e30a1980a0de12608e3876058135a172ff5e81"
+  integrity sha512-nkz2VD1t6XsUJoh8wVD2kF11kozDq9/NreHm7K9D3ne9ZSzqfWUrMeDswCy+PTo0NpULAyNYbmf2pYItltrZ4w==
+  dependencies:
+    callbag-share "^1.0.0"
+
 callbag-from-iter@1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/callbag-from-iter/-/callbag-from-iter-1.2.0.tgz#c1886b08a447cd2efd9a140ec11743d705f26ca9"
@@ -1483,6 +1490,13 @@ callbag-interval@1, callbag-interval@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/callbag-interval/-/callbag-interval-1.1.0.tgz#161ae4b5bf36b98bd5ef7caa3c3f8161fc032338"
   integrity sha512-xkYj7t/l9+GaP0kvPi6LadF3ZNSiQAhbEzwnnTrDB/UtkBCrzKPZ9Kiti8P8oHYxL2jGEuRWi86PD3uM7qXLbg==
+  dependencies:
+    callbag "^1.1.0"
+
+callbag-lazy@^2.0.1:
+  version "2.0.1"
+  resolved "https://ip-109-71-162-126.dditscdn.com/nexus/repository/npm-all/callbag-lazy/-/callbag-lazy-2.0.1.tgz#7dfbf04973ce511a4265abf1e31eaadf14d90eba"
+  integrity sha512-NGusLZnRL6F26wxi6ydJl1kPB2zXU+s3f3u8dYW/8SFq9Z0WZVYrkMfnWbvX3hJLMf9I+XSL1RCj504Re1m0Vg==
   dependencies:
     callbag "^1.1.0"
 
@@ -1527,7 +1541,7 @@ callbag-scan@1:
   dependencies:
     callbag "^1.1.0"
 
-callbag-share@1:
+callbag-share@1, callbag-share@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/callbag-share/-/callbag-share-1.2.0.tgz#5ed2333ebf4cc952d878348bf11f649894a6b989"
   integrity sha512-Gt+D5lfJ/j3X5/3PiMPL8hHDPBmeQILZl2QYu+YJtSFz6PlNGQSL45aD4e4uoxMvhMZY9NpMHh7KRWia9PZA+g==
@@ -1554,6 +1568,11 @@ callbag-take@1:
   integrity sha512-SMN236uYqjZ+8ypAY12qkV2QwutjOe96GyYPzUF9RKKJR5nRyu0fON4r4XBZ3ZonOWnDW05CWmKmS0mVQg5TIg==
   dependencies:
     callbag "^1.1.0"
+
+callbag-timer@^1.0.0:
+  version "1.0.0"
+  resolved "https://ip-109-71-162-126.dditscdn.com/nexus/repository/npm-all/callbag-timer/-/callbag-timer-1.0.0.tgz#076f720ebbbf5aeff6d6a987aefe865b43ebdae9"
+  integrity sha512-iLmp08Q2b8O1VlGaYj7WCG8iQUHla7lRBmF4yg0IXjMiYW2nDwWyI5tzgPExlTAsAy+USu9V7gC+eZSqqjRQCg==
 
 callbag@1, callbag@^1.1.0, callbag@^1.2.0:
   version "1.2.0"

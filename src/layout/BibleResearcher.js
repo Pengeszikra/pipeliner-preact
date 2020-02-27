@@ -22,23 +22,13 @@ export default () => {
   
   return (
     <pre>{`
-    -- Bible Researcher --
+    -- Bible Study --
 
-    Bible studie application based on `} 
-
+     How speed up javascript development process?
+    
+    `} 
     <a href="https://szentiras.hu/api" target="_base">szentiras.hu/api</a>
-
-    {`
-
-    Focus on:      
-      - Studie in different Bible publication
-      - usability
-      - preact-slash test
-      - local database test
-      - custom input component test      
-      - mobile first
-      + pipeline operator using 
-    `}
+    <br />
     <input type='text' value={search} onInput={changeSearchInput}/><span>{search}</span>
     <p>{answer}</p>
     
