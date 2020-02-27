@@ -21,7 +21,7 @@ export default () => {
   source |> mapTo('--> hasznaltak ') |> forEach(log);
 
   useEffect(() => {
-    timer(5000) |> forEach(emitter);
+    fromEvent(global, 'click') |> forEach(emitter);
   }, []);
     
   useEffect(() => {
