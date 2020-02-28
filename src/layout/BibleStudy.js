@@ -13,6 +13,7 @@ import mergeWith from 'callbag-merge-with';
 import fromFunction from 'callbag-from-function';
 import timer from 'callbag-timer';
 import  interval  from 'callbag-interval';
+import SearchResult from '../show/SearchResult';
 
 let toShort = null;
 const treshold = 1000;
@@ -22,7 +23,7 @@ export default () => {
   const {answer, search} = state;
 
   const changeSearchInput = ({target:{value}}) => value |> askAbout;
-  const apiSearch = searchText => searchText |> kereses(json => JSON.stringify(json, null, 2) |> answerReady );
+  const apiSearch = searchText => searchText |> kereses(json => json |> answerReady );
 
   useEffect(() => {
     clearTimeout(toShort);
@@ -30,17 +31,20 @@ export default () => {
   }, [search])
   
   return (
-    <pre>{`
-    -- Bible Study --
+    <main>
+    <input type='text' value={search} onInput={changeSearchInput}/>
+    {answer && <SearchResult result={answer} />}
+    </main>
+  );
+}
 
-     simple useEffect beat callbag
-    
+/*
+
+{`
+    -- Bible Study --
+         
     `} 
     <a href="https://szentiras.hu/api" target="_base">szentiras.hu/api</a>
     <br />
-    <input type='text' value={search} onInput={changeSearchInput}/><span>{search}</span>
-    <p>{answer}</p>
-    
-    </pre>
-  );
-}
+    <span>{search}</span>
+*/

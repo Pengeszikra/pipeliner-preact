@@ -32,10 +32,10 @@ const Books = ({results = []}) => (
   )
 );
 
-export default function ({result = {}}) {
-  const {fullTextResult = {}} = result;
-  const {results, hitCount = 0} = fullTextResult;
-      
+export default function ({result}) {  
+  const {fullTextResult} = result || {};
+  const {results, hitCount = 0} = fullTextResult || {};
+   
   return (
     <Founded>
       <HitCount>{hitCount}</HitCount>
