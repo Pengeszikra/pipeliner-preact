@@ -14,37 +14,33 @@ import fromFunction from 'callbag-from-function';
 import timer from 'callbag-timer';
 import  interval  from 'callbag-interval';
 import SearchResult from '../show/SearchResult';
+import TranslateSelector from '../show/TranslateSelector';
 
 let toShort = null;
 const treshold = 1000;
 
 export default () => {
-  const {state, askAbout, answerReady } = useReducerActions(reducer, initialState, actions);
-  const {answer, search} = state;
+  const {state, askAbout, answerReady, changeTranslation } = useReducerActions(reducer, initialState, actions);
+  const {answer, search, translation} = state;
 
   const changeSearchInput = ({target:{value}}) => value |> askAbout;
-  const apiSearch = searchText => searchText |> kereses(json => json |> answerReady );
+  const apiSearch = searchText => searchText |> kereses(json => answerReady(json));
 
   useEffect(() => {
     clearTimeout(toShort);
-    toShort = setTimeout(() => search.length > 2 && apiSearch(search), treshold); 
+    const searchWithTranslation = [search, translation].join('/');
+    toShort = setTimeout(() => search.length > 2 && apiSearch(searchWithTranslation), treshold); 
   }, [search])
+
+  const {fullTextResult:{results = []} = {}} = answer || {};
+  const filteredResults = results.filter(({translation:{abbrev}}) => abbrev === translation);
   
   return (
     <main>
-    <input type='text' value={search} onInput={changeSearchInput}/>
-    {answer && <SearchResult result={answer} />}
+    <input type='text' value={search} onInput={changeSearchInput}/><span>{translation}</span>
+    <TranslateSelector changeTranslation={changeTranslation} translation={translation}/>
+    {answer && <SearchResult results={filteredResults} />}
+    {/* {answer && <pre>{JSON.stringify(answer, null, 2)}</pre>} */}
     </main>
   );
 }
-
-/*
-
-{`
-    -- Bible Study --
-         
-    `} 
-    <a href="https://szentiras.hu/api" target="_base">szentiras.hu/api</a>
-    <br />
-    <span>{search}</span>
-*/

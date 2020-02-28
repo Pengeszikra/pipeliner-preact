@@ -25,7 +25,11 @@ input, select {
   margin: 1em; 
 }
 
-select {display: block}
+select {
+  display: block;
+  height: 3em;
+  border-radius: .21em; 
+}
 input:focus, select:focus { outline:none; box-shadow: 0 0 0 1px #383838; }
 .btn { 
   background: #456; 
