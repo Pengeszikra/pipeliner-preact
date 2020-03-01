@@ -1,7 +1,7 @@
 import {h, render} from 'preact';
-import BibleSearch from './show/BibleSearch';
 import './style/style.scss';
-import BibleStudy from './layout/BibleStudy';
-import CallbagResearch from './layout/CallbagResearch';
+
+import BibleStudy from './show/BibleStudy';
+import CallbagResearch from './show/CallbagResearch';
 
 render( <BibleStudy />, document.body );

@@ -1,1 +1,0 @@
-export const actionCreator = type => [type, payload => ({type, payload})];

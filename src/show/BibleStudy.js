@@ -13,8 +13,8 @@ import mergeWith from 'callbag-merge-with';
 import fromFunction from 'callbag-from-function';
 import timer from 'callbag-timer';
 import  interval  from 'callbag-interval';
-import SearchResult from '../show/SearchResult';
-import TranslateSelector from '../show/TranslateSelector';
+import SearchResult from './SearchResult';
+import TranslateSelector from './TranslateSelector';
 
 let toShort = null;
 const treshold = 1000;
