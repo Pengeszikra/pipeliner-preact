@@ -7,9 +7,11 @@ import {reducer, initialState, actions} from '../flow/readingReducer';
 import TranslateSelector from './TranslateSelector';
 import { forditasok, konyvek } from './../flow/szentirasApi';
 
+const [BookName, BooksHolder] = divFactory('book-name-item', 'books-holder')
+
 export default () => {
   const {state, askBooklist, readBible, changeTranslation } = useReducerActions(reducer, initialState, actions);
-  const {translation, bookList, verses} = state;
+  const {translation, books, verses} = state;
 
   useEffect(() => {
     translation |> konyvek(askBooklist);
@@ -18,9 +20,9 @@ export default () => {
   return (
     <main>
       <TranslateSelector changeTranslation={changeTranslation} translation={translation}/>
-      <pre>
-        {JSON.stringify(bookList, null, 2)}
-      </pre>
+      <BooksHolder>
+        {books && books.map(({name}) => <BookName>{name}</BookName>)}
+      </BooksHolder>
     </main>
   );
 }

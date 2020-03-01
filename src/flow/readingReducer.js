@@ -13,7 +13,9 @@ export const initialState = {
 
 export const reducer = (state, {type, payload}) => {
   switch (type) {
-    case ASK_BOOKLIST: return {...state, bookList: payload};
+    case ASK_BOOKLIST: 
+      const {books} = payload;
+      return {...state, books};
     case READ_BIBLE: return {...state, verses: payload};
     case CHANGE_TRANSLATION: return {...state, translation: payload};
     default: return state;
