@@ -41,17 +41,19 @@ export default () => {
   ).map(founds => founds.length);
   
   const filteredResults = results.filter(({translation:{abbrev}}) => abbrev === translation);
+
+  const clickTransSelect = transKey => event => changeTranslation(transKey);
   
   return (
     <main>
     <input type='text' value={search} onInput={changeSearchInput}/>
+ 
     {counts.map((hit, key) => hit > 0 && ( 
       translationKeys[key] === translation 
-      ? <span key={key} selected class="trans-shorthand" data-hit-count={hit}>{translationKeys[key]}</span>
-      : <span key={key} class="trans-shorthand" data-hit-count={hit}>{translationKeys[key]}</span>
+      ? <span key={key} selected class="trans-shorthand" onClick={clickTransSelect(translationKeys[key])} data-hit-count={hit}>{translationKeys[key]}</span>
+      : <span key={key} class="trans-shorthand" onClick={clickTransSelect(translationKeys[key])} data-hit-count={hit}>{translationKeys[key]}</span>
     ))}
     
-   
     <TranslateSelector changeTranslation={changeTranslation} translation={translation}/>
     {answer && <SearchResult results={filteredResults} />}
     {/* {answer && <pre>{JSON.stringify(answer, null, 2)}</pre>} */}
