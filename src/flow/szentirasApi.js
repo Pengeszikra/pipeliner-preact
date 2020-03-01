@@ -15,6 +15,7 @@ const ask = domain => view => (query = "") => fetch(domain + query)
   .then(json => view(json))
   .catch(err => view({}, err));
 
-const szentirasApiDomain = "https://szentiras.hu/api/"
-const idezet = ask(szentirasApiDomain + "idezet/");
+const szentirasApiDomain = "https://szentiras.hu/api/";
+export const konyvek = ask(szentirasApiDomain + "books/");
+export const idezet = ask(szentirasApiDomain + "idezet/");
 export const kereses = ask(szentirasApiDomain + "search/");

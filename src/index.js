@@ -3,10 +3,11 @@ import './style/style.scss';
 
 import BibleStudy from './show/BibleStudy';
 import CallbagResearch from './show/CallbagResearch';
+import ReadBible from './show/ReadBible';
 
 render( (
   <main>
-    <BibleStudy />
+    <ReadBible />
     <BibleStudy />
   </main>
 ), document.body );
