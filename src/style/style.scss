@@ -75,3 +75,30 @@ pre {
 .vers-line {margin: .3em; }
 .chapter-vers {color: #777; margin-right: 1em;}
 main {margin: 1em;}
+
+span.trans-shorthand {
+  position: relative;  
+  margin-right: .5em;
+  &[selected] {
+    color: white;
+    &:before {
+      background: #789;
+      color: white;        
+    }  
+  }
+  &:before {
+    content: attr(data-hit-count);
+    position: absolute;
+    top: -2em;
+    right: -2em;
+    background: #456;
+    color: #BB9;
+    font-size: .6em;   
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    z-index: 2;
+  }
+} 

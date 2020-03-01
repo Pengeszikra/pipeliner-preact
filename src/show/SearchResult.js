@@ -35,7 +35,6 @@ const Books = ({results = []}) => (
 export default function ({results = []}) {  
   return (
     <Founded>
-      <HitCount>{results.length}</HitCount>
       <Books results ={results} />
     </Founded> 
   );
