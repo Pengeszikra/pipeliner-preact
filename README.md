@@ -3,25 +3,20 @@
 Basic setup for functional style preact based development with pipeline operator.
 Side effects handling: hooks, callbags
 
-## VS-CODE for use proposal pipeline operator
-Required to turn off javascript validation
+## setup and works:
+  - install ```yarn```
+  - development ```yarn start```
+  - build ```yarn build```
+  - elint check ```yarn lint```
 
-### install
+## clear origin
 ```bash
-yarn
+git remote rm origin
 ```
 
-### development
-```bash
-yarn start
-```
+## vs code problem solved by:
+<https://en.programqa.com/question/51741333/>
 
-### build
-```bash
-yarn build
-```
-
-### elint check
-```bash
-yarn lint
+```json
+"javascript.validate.enable": false
 ```
