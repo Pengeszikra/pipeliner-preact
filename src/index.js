@@ -1,13 +1,5 @@
 import {h, render} from 'preact';
-import './style/style.scss';
 
-import BibleStudy from './show/BibleStudy';
-import CallbagResearch from './show/CallbagResearch';
-import ReadBible from './show/ReadBible';
+const Welcome = ({framework}) => <pre>pipeliner :: {framework} with pipeline operator</pre>;
 
-render( (
-  <main>
-    <ReadBible />
-    <BibleStudy />
-  </main>
-), document.body );
+render( <Welcome framework="preact" />, document.body);

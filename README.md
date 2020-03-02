@@ -1,20 +1,27 @@
-# Bible Study Application ( hungarian languages )
+# pipeliner for preact
 
-> Focus on:      
-  - Study in different Bible publication
-  - usability
-  - preact-slash test
-  - local database test
-  - custom input component test      
-  - mobile first
-  + pipeline operator using 
+Basic setup for functional style preact based development with pipeline operator.
+Side effects handling: hooks, callbags
 
-### Pipeline operator solution ??
-<https://github.com/maestrow/pipeline-operator-in-js-howto/blob/master/package.json>
+## VS-CODE for use proposal pipeline operator
+Required to turn off javascript validation
 
-### vs code problem solved by:
-<https://en.programqa.com/question/51741333/>
+### install
+```bash
+yarn
+```
 
-```json
-"javascript.validate.enable": false
+### development
+```bash
+yarn start
+```
+
+### build
+```bash
+yarn build
+```
+
+### elint check
+```bash
+yarn lint
 ```

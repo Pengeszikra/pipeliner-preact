@@ -1,7 +1,7 @@
 {
-  "name": "bible-hu-preact",
-  "description": "bible app with preact/hooks",
-  "version": "0.2.0",
+  "name": "pipeliner-preact",
+  "description": "",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -25,7 +25,6 @@
     "callbag-from-event": "^1.2.1",
     "callbag-from-function": "^2.1.0",
     "callbag-interval": "^1.1.0",
-    "callbag-lazy": "^2.0.1",
     "callbag-merge-with": "^1.0.3",
     "callbag-sample": "^2.0.0",
     "callbag-take-while": "^2.0.0",
